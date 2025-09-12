@@ -16,7 +16,10 @@
          <hr />
          <ul>
             <c:forEach var="item" items="${tarefas}">
-                <li>${item.nome}</li>
+                <li>
+                    <a href="/tarefas/delete?id=${item.id}" >$[Excluir] </a>
+                    <a href="/tarefas/update?id=${item.id}" >${item.nome} </a>
+                </li>
             </c:forEach>   
          </ul>
     </body>
